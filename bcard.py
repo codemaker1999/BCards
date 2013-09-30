@@ -2,12 +2,9 @@ from reportlab.platypus import BaseDocTemplate, Frame, FrameBreak, PageTemplate
 from reportlab.lib.units import inch
 from reportlab.lib.pagesizes import letter
 from reportlab.platypus.flowables import Image
-# dirty scaling hacks
-bigletter = (letter[0]*5, letter[1]*5)
-inch = 5*inch
 # init
 elements=[]
-doc = BaseDocTemplate('cards.pdf',pagesize=bigletter,showBoundary=0,)
+doc = BaseDocTemplate('cards.pdf',pagesize=letter,showBoundary=0,)
 cardx,cardy = 3.5*inch, 2*inch
 # Two Columns
 frame1 = Frame( 0.65*inch,         0.5*inch, cardx+2, 10*inch+2, id='col1',
